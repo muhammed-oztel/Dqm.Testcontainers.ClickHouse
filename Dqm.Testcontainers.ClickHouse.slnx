@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Dqm.Testcontainers.ClickHouse/Dqm.Testcontainers.ClickHouse.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Dqm.Testcontainers.ClickHouse.Tests/Dqm.Testcontainers.ClickHouse.Tests.csproj" />
+  </Folder>
+</Solution>
