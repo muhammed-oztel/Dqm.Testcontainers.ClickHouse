@@ -60,6 +60,17 @@ public class ClickHouseClusterContainerBackupRestoreTests
                 restored.ConnectionString, "SELECT count() FROM widgets", CancellationToken.None);
 
             Assert.Equal(6UL, count);
+
+            // count() alone can't rule out corruption where the wrong per-node backup zip is
+            // restored onto the wrong node (e.g. one shard's rows duplicated onto the other) --
+            // the total could still coincidentally be 6. Assert the exact row identities survived,
+            // sorted deterministically regardless of which shard each row physically lives on.
+            var idsCsv = await ClickHouseSql.ExecuteScalarAsync<string>(
+                restored.ConnectionString,
+                "SELECT arrayStringConcat(arraySort(groupArray(id)), ',') FROM widgets",
+                CancellationToken.None);
+
+            Assert.Equal("1,2,3,4,5,6", idsCsv);
         }
         finally
         {
