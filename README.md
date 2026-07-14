@@ -1,5 +1,7 @@
 # Dqm.Testcontainers.ClickHouse
 
+[![NuGet](https://img.shields.io/nuget/v/Dqm.Testcontainers.ClickHouse.svg)](https://www.nuget.org/packages/Dqm.Testcontainers.ClickHouse)
+
 Testcontainers-based single-node and multi-shard ClickHouse test environments,
 with native `BACKUP`/`RESTORE` support for seeding tests from a real snapshot.
 

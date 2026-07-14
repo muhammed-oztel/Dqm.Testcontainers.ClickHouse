@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <IsPackable>true</IsPackable>
     <PackageId>Dqm.Testcontainers.ClickHouse</PackageId>
-    <Version>0.1.0</Version>
+    <Version>0.1.1</Version>
     <Authors>Muhammed Fatih Öztel</Authors>
     <Description>Testcontainers-based single-node and multi-shard ClickHouse test environments with native BACKUP/RESTORE support.</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
