@@ -38,7 +38,7 @@ public class ClickHouseClusterContainerBackupRestoreTests
                     CancellationToken.None);
                 await ClickHouseSql.ExecuteAsync(
                     source.ConnectionString,
-                    "INSERT INTO widgets VALUES (1,'a'),(2,'b'),(3,'c'),(4,'d'),(5,'e'),(6,'f')",
+                    "INSERT INTO widgets SETTINGS insert_distributed_sync = 1 VALUES (1,'a'),(2,'b'),(3,'c'),(4,'d'),(5,'e'),(6,'f')",
                     CancellationToken.None);
 
                 await source.BackupAsync(backupDir, CancellationToken.None);
