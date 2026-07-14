@@ -11,6 +11,7 @@
     <Description>Testcontainers-based single-node and multi-shard ClickHouse test environments with native BACKUP/RESTORE support.</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/muhammed-oztel/Dqm.Testcontainers.ClickHouse</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
